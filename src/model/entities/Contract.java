@@ -4,7 +4,7 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Contratc {
+public class Contract {
 	
 	private Integer number;
 	private LocalDate date;
@@ -12,7 +12,7 @@ public class Contratc {
 	
 	private List<Installment> installments = new ArrayList<>();
 	
-	public Contratc(Integer number, LocalDate date, Double totalValue) {
+	public Contract(Integer number, LocalDate date, Double totalValue) {
 		this.number = number;
 		this.date = date;
 		this.totalValue = totalValue;
