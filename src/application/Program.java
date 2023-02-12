@@ -39,7 +39,7 @@ public class Program {
 			
 			System.out.println("Parcelas: ");
 			for (Installment installment : contrato.getInstallments()) {
-				System.out.println(installment.getDueDate().format(fmt) + " - R$" + String.format("%.2f", installment.getAmount()));
+				System.out.println(installment);
 			}
 			
 		} catch(DomainException | NullPointerException e) {
@@ -49,8 +49,6 @@ public class Program {
 		} catch(InputMismatchException e) {
 			System.out.println("ERRO");
 		}
-		
-		
 		
 		sc.close();
 
