@@ -4,6 +4,8 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
+import model.exceptions.DomainException;
+
 public class Contract {
 	
 	private Integer number;
@@ -12,9 +14,12 @@ public class Contract {
 	
 	private List<Installment> installments = new ArrayList<>();
 	
-	public Contract(Integer number, LocalDate date, Double totalValue) {
+	public Contract(Integer number, LocalDate date, Double totalValue) throws DomainException {
 		this.number = number;
 		this.date = date;
+		if (totalValue <=0) {
+			throw new DomainException("Valor do contrato não pode ser zero ou negativo.");
+		}
 		this.totalValue = totalValue;
 	}
 
